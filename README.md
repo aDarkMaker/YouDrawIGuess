@@ -47,9 +47,8 @@ pip install -r requirements.txt
 
 3. 运行主程序
 
-用电脑自带的剪切板将图片剪切到剪切板中，然后运行以下命令：
-
 ```bash
+# 用电脑自带的剪切板将图片剪切到剪切板中，然后运行以下命令：
 python src/main.py
 ```
 
