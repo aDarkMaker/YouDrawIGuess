@@ -15,7 +15,7 @@ class LineArtGenerator:
         os.makedirs(self.output_dir, exist_ok=True)
 
     @staticmethod
-    def _create_line_art(img, threshold1=180, threshold2=250):
+    def _create_line_art(img, threshold1=80, threshold2=120):
         """
         Args:
             img: 输入图像(numpy数组)
@@ -29,7 +29,7 @@ class LineArtGenerator:
         edges = cv2.Canny(blurred, threshold1, threshold2)
         return 255 - edges  # 反色处理
 
-    def process_clipboard(self, threshold1=180, threshold2=250):
+    def process_clipboard(self, threshold1=80, threshold2=120):
         """处理剪切板图片"""
         clipboard_content = ImageGrab.grabclipboard()
         
@@ -62,7 +62,7 @@ class LineArtGenerator:
         return output_path
 
     @classmethod
-    def batch_process(cls, input_dir, output_dir, threshold1=150, threshold2=200): # 一般用不上
+    def batch_process(cls, input_dir, output_dir, threshold1=80, threshold2=120): # 一般用不上
         """批量处理图片文件
         Args:
             input_dir: 输入图片目录
