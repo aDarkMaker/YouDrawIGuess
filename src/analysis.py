@@ -6,7 +6,7 @@ import os
 
 class LineArtGenerator:
     def __init__(self, output_dir="data"):
-        """初始化线稿生成器
+        """
         Args:
             output_dir: 输出目录路径 (默认data)
         """
@@ -16,7 +16,7 @@ class LineArtGenerator:
 
     @staticmethod
     def _create_line_art(img, threshold1=180, threshold2=250):
-        """核心线稿生成算法
+        """
         Args:
             img: 输入图像(numpy数组)
             threshold1: Canny弱阈值 (默认180)
@@ -62,13 +62,13 @@ class LineArtGenerator:
         return output_path
 
     @classmethod
-    def batch_process(cls, input_dir, output_dir, threshold1=150, threshold2=200):
+    def batch_process(cls, input_dir, output_dir, threshold1=150, threshold2=200): # 一般用不上
         """批量处理图片文件
         Args:
             input_dir: 输入图片目录
             output_dir: 输出目录
-            threshold1: Canny弱阈值 (默认150)
-            threshold2: Canny强阈值 (默认200)
+            threshold1: Canny弱阈值 (默认180)
+            threshold2: Canny强阈值 (默认250)
         """
         os.makedirs(output_dir, exist_ok=True)
         processed = 0
