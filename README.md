@@ -36,7 +36,7 @@ try/
 1. 克隆仓库
 
 ```bash
-git clone [仓库地址]
+git clone https://github.com/aDarkMaker/YouDrawIGuess.git
 ```
 
 2. 安装依赖
@@ -47,8 +47,10 @@ pip install -r requirements.txt
 
 3. 运行主程序
 
+用电脑自带的剪切板将图片剪切到剪切板中，然后运行以下命令：
+
 ```bash
-python src/main.py --input data/input/sample.csv --output data/output/
+python src/main.py
 ```
 
 ## 配置说明
